@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns4:Invoice xmlns:ns4="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:ns3="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ns2="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+  <ID>Dummy Invoice number</ID>
+  <IssueDate>2022-11-17Z</IssueDate>
+  <ns3:AccountingSupplierParty />
+  <ns3:AccountingCustomerParty />
+  <ns3:TaxTotal>
+    <TaxAmount currencyID="SAR">10</TaxAmount>
+      <ns3:TaxSubtotal>
+      <TaxableAmount currencyID="SAR">10</TaxableAmount>
+          <TaxAmount currencyID="SAR">10</TaxAmount>
+          <ns3:TaxCategory>
+        <ID schemeID="UNCL5305" schemeAgencyID="6">Z</ID>
+              <Percent>10</Percent>
+              <ns3:TaxScheme>
+          <ID schemeID="UNCL5305" schemeAgencyID="6">VAT</ID>
+        </ns3:TaxScheme>
+      </ns3:TaxCategory>
+    </ns3:TaxSubtotal>
+  </ns3:TaxTotal>
+  <ns3:LegalMonetaryTotal>
+    <PayableAmount currencyID="SAR">10</PayableAmount>
+  </ns3:LegalMonetaryTotal>
+  <ns3:InvoiceLine>
+    <ID>1</ID>
+      <LineExtensionAmount currencyID="SAR">10</LineExtensionAmount>
+      <ns3:Item />
+  </ns3:InvoiceLine>
+</ns4:Invoice>

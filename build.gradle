@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // https://mvnrepository.com/artifact/com.helger.ubl/ph-ubl21
+    implementation group: 'com.helger.ubl', name: 'ph-ubl21', version: '6.7.0'
+    // https://mvnrepository.com/artifact/com.helger.ubl/ph-ubl21-codelists
+    implementation group: 'com.helger.ubl', name: 'ph-ubl21-codelists', version: '6.7.0'
+
+    // https://mvnrepository.com/artifact/com.sun.activation/jakarta.activation
+    implementation group: 'com.sun.activation', name: 'jakarta.activation', version: '2.0.1'
+// https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl
+    implementation group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '4.0.1'
+// https://mvnrepository.com/artifact/com.helger/jcodemodel
+    implementation group: 'com.helger', name: 'jcodemodel', version: '3.4.1'
+// https://mvnrepository.com/artifact/com.helger/ph-genericode
+    testImplementation group: 'com.helger', name: 'ph-genericode', version: '6.3.0'
+// https://mvnrepository.com/artifact/com.helger/ph-sbdh
+    implementation group: 'com.helger', name: 'ph-sbdh', version: '4.3.0'
+// https://mvnrepository.com/artifact/com.helger.commons/ph-datetime
+
+    implementation group: 'com.helger.commons', name: 'ph-datetime', version: '10.2.1'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
